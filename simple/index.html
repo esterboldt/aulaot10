@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </head>
 <body>
     <h1>Atividades simples</h1>
@@ -22,9 +23,18 @@
         </section>
         <section class="second">
             <h2>Media escolar (7)</h2>
+            <input type="number" id="nota1" placeholder="Insira a primeira nota">
+            <input type="number" id="nota2" placeholder="Insira a segunda nota">
+            <input type="number" id="nota3" placeholder="Insira a terceira nota">
+            <button class="btn1" onclick="media()">Realizar a média</button>
+            <p id="resposta"></p>
         </section>
         <section class="third">
             <h2>Contador javascript</h2>
+            <label for="numeroInput">Informe o número:</label>
+            <input type="number" id="numeroInput" required>
+            <button type="button" onclick="contar">Contar</button>
+            <p id="result"></p>
         </section>
     </main>
     <script src="script.js"></script>

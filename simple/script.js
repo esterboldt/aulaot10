@@ -17,6 +17,34 @@ function media(){
     var n2 = document.getElementById("nota2").valueAsNumber;
     var n3 = document.getElementById("nota3").valueAsNumber;
     var res = document.getElementById("resposta");
-    res.textContent = ((n1 + n2 + n3) / 3).toFixed(2)
+    var res = (n1 + n2 + n3) / 3
+
+    if(res >= 7){
+        mediatexto.innerHTML = res.tofixed(2)
+        mediatextol.style.color = "green"
+    } else {
+        mediatexto.innerHTML = res.tofixed(2)
+        mediatextol.style.color = "red"
+    }
     
+}
+
+function contar(){
+    const num = ($("#numeroInput").val());
+    
+    if(isNaN(num)){
+        $('#result').text("Por favor, informe um número válido");
+        return
+    }
+
+    var resultadoStr = ""
+    if(num <= 10000){
+        for(var cont = 1; cont <= num; cont++){
+            resultadoStr = resultadoStr + cont + "<br>";
+    }
+    $('#result').html(resultadoStr)
+    }else{
+        $('#result').text("Vai travar se você digitar esse número");
+
+    }
 }
